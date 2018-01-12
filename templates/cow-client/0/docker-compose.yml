@@ -1,7 +1,7 @@
 version: '2'
 services:
   cow-client:
-    image: registry.cn-shenzhen.aliyuncs.com/ly_ops/cow:0.1.4
+    image: ${cow_image}
     environment:
       ALLOWEDCLIENT: ${ALLOWEDCLIENT}
       LISTEN: ${LISTEN}
