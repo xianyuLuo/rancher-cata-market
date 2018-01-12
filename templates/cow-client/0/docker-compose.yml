@@ -7,8 +7,8 @@ services:
       LISTEN: ${LISTEN}
       PROXY: ${PROXY}
     stdin_open: true
-    volumes:
-    - cow:/cow/.cow
+#    volumes:
+#   - cow:/cow/.cow
     tty: true
     ports:
     - 7777:7777/tcp
