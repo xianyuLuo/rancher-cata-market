@@ -13,13 +13,6 @@ questions:
           description: "镜像地址"
           default: "registry.cn-shenzhen.aliyuncs.com/ly_ops/cow:0.1.4"
           
-  - variable: "name"
-          type: "string"
-          required: true
-          label: "name"
-          description: "应用名称"
-          default: "cow-client"
-          
   - variable: "PROXY"
           type: "string"
           required: true
