@@ -33,3 +33,7 @@ catalog:
               label: "white list"
               description: "只有在白名单内的IP才能使用。用 , 分割"
               default: "127.0.0.1/32"
+services:
+  cow-client:
+    scale: 1
+    start_on_create: true
