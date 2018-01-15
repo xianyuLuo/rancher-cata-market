@@ -15,7 +15,7 @@
         required: true
         label: "listen address"
         description: "cow-server监听地址，等待cow-client来连接，支持 cow、http协议，具体见cow配置文档 https://github.com/xianyuLuo/cow"
-        default: "http://0.0.0.0:<port>"
+        default: "http://0.0.0.0:6555"
 
 cow-server:
   scale: 1
