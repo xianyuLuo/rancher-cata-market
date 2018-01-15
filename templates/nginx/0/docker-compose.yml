@@ -1,0 +1,11 @@
+version: '2'
+services:
+  web:
+    image: nginx
+    {{- if eq .Values.PUBLIC "true" }}
+    ports:
+    - 8000
+    {{- else }}
+    expose:
+    - 8000
+    {{- end }}
