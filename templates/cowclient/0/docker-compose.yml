@@ -9,7 +9,7 @@ services:
     stdin_open: true
 #    volumes:
 #   - cow:/cow/.cow
-    tty: true
+#    tty: true
     ports:
     - 7777:7777/tcp
     labels:
