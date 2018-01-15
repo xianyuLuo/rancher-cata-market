@@ -14,8 +14,8 @@
         type: "string"
         required: true
         label: "cow-server"
-        description: "cow-server地址"
-        default: "http://[cow-server]:[port]"
+        description: "cow-server地址，支持http、cow协议"
+        default: "http://<cow-server>:6555"
 
       - variable: "LISTEN"
         type: "string"
