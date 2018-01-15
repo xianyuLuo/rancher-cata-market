@@ -4,5 +4,5 @@ description: |
   cow：仅浏览器使用的VPN cow代理server端，需要再配合一个cow-client使用
 version: 0.0.1 # 应用商店模板对应的版本
 category: cow vpn # 用于模板搜索时的目录
-maintainer: xianyuLuo # 该模板的维护者
+maintainer: xianyuLuo@qq.com # 该模板的维护者
 license: GPL # 许可类型
