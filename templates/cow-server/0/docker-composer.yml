@@ -3,15 +3,7 @@ services:
   cow:
     image: registry.cn-shenzhen.aliyuncs.com/ly_ops/cow:0.1.4
     environment:
-      ALLOWEDCLIENT: 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 182.150.46.53/32, 118.122.141.164/32,124.65.117.202/32,123.123.60.152/32,114.241.10.120/32,220.194.42.10/32
-      LISTEN: http://0.0.0.0:7777 172.16.249.26:7777
-      PROXY: http://123.207.40.131:6555
+      LISTEN: ${LISTEN}
     stdin_open: true
-    volumes:
-    - cow:/cow/.cow
-    tty: true
     ports:
-    - 7777:7777/tcp
-    labels:
-      io.rancher.container.pull_image: always
-      io.rancher.scheduler.affinity:host_label: cow=true
+    - 6555:6555/tcp
