@@ -1,5 +1,22 @@
-version: '2'
-services:
-  cow:
-    scale: 1
-    start_on_create: true
+.catalog:
+    name: cow-server
+    version: 0.0.1
+    description: cow-server
+    questions:
+      - variable: "cow_image"
+        type: "string"
+        required: true
+        label: "images"
+        description: "镜像地址"
+        default: "registry.cn-shenzhen.aliyuncs.com/ly_ops/cow:0.1.4"
+
+      - variable: "LISTEN"
+        type: "string"
+        required: true
+        label: "listen address"
+        description: "cow-server监听地址，等待cow-client来连接，支持 cow、http协议，具体见cow配置文档 https://github.com/xianyuLuo/cow"
+        default: "http://0.0.0.0:<port>"
+
+cow-client:
+  scale: 1
+  start_on_create: true
