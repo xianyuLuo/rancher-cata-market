@@ -1,0 +1,10 @@
+version: '2'
+catalog:
+  name: Nginx Application
+  version: v0.0.1
+  questions:
+  - variable: PUBLIC
+    label: Publish Ports?
+    required: true
+    default: true
+    type: boolean
