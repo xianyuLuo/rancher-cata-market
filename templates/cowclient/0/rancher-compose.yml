@@ -1,39 +1,36 @@
-version: '2'
-catalog:
+.catalog:
     name: cow-client
     version: 0.0.1
     description: cow-client
-
     questions:
-
       - variable: "cow_image"
-              type: "string"
-              required: true
-              label: "images"
-              description: "镜像地址"
-              default: "registry.cn-shenzhen.aliyuncs.com/ly_ops/cow:0.1.4"
+          type: "string"
+          required: true
+          label: "images"
+          description: "镜像地址"
+          default: "registry.cn-shenzhen.aliyuncs.com/ly_ops/cow:0.1.4"
 
       - variable: "PROXY"
-              type: "string"
-              required: true
-              label: "cow-server"
-              description: "cow-server地址"
-              default: "http://123.207.40.131:6555"
+          type: "string"
+          required: true
+          label: "cow-server"
+          description: "cow-server地址"
+          default: "http://123.207.40.131:6555"
 
       - variable: "LISTEN"
-              type: "string"
-              required: true
-              label: "listen address"
-              description: "cow-client监听地址。0.0.0.0:7777为监听地址，172.16.249.26:7777为暴露在容器外的地址，服务调度到哪台机器，就写哪台机器地址"
-              default: "http://0.0.0.0:7777 172.16.249.26:7777"
+          type: "string"
+          required: true
+          label: "listen address"
+          description: "cow-client监听地址。0.0.0.0:7777为监听地址，172.16.249.26:7777为暴露在容器外的地址，服务调度到哪台机器，就写哪台机器地址"
+          default: "http://0.0.0.0:7777 172.16.249.26:7777"
 
       - variable: "ALLOWEDCLIENT"
-              type: "string"
-              required: true
-              label: "white list"
-              description: "只有在白名单内的IP才能使用。用 , 分割"
-              default: "127.0.0.1/32"
-services:
-  cow-client:
-    scale: 1
-    start_on_create: true
+          type: "string"
+          required: true
+          label: "white list"
+          description: "只有在白名单内的IP才能使用。用 , 分割"
+          default: "127.0.0.1/32"
+
+cow-client:
+  scale: 1
+  start_on_create: true
