@@ -15,7 +15,7 @@
         required: true
         label: "cow-server"
         description: "cow-server地址"
-        default: "http://123.207.40.131:6555"
+        default: "http://[cow-server]:[port]"
 
       - variable: "LISTEN"
         type: "string"
